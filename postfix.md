@@ -114,6 +114,33 @@ The data/value entry at that that name/subdomain has to be the two strings follo
 
 Ignoring the key specifications and the quotes, the brackets etc.
 
+# DMARC and SPF
+
+Additionally you want to have two more TXT records for security reasons. (?)
+
+- For DMARC (replace `yourdomain.com` with yours):
+
+At `_dmarc.yourdomain.com` (`_dmarc`)
+
+this TXT data (replace `yourdomain.com` with yours):
+
+`v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com; fo=1`
+
+- For SPF (replace `yourdomain.com` and `yourmaildomain.com` with yours)
+
+At `@.yourdomain.com` (`@`)
+
+this
+
+`v=spf1 mx a:yourmaildomain.com -all`
+
+- You can test your settings at this website
+
+https://appmaildev.com/en/dkim
+
+Click on the "Next" button to get a temporary email adress where you send an email through your SMTP server.
+When everything is correct it should show "pass" at "SPF", "DKIM" and "DMARC".
+
 
 # Synapse SMTP Settings
 
