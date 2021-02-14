@@ -116,6 +116,8 @@ Ignoring the key specifications and the quotes, the brackets etc.
 
 # DMARC and SPF
 
+https://git.larbs.xyz/luke/emailwiz/src/branch/master/emailwiz.sh
+
 Additionally you want to have two more TXT records for security reasons. (?)
 
 - For DMARC (replace `yourdomain.com` with yours):
